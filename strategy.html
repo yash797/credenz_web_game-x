@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="tailwind.css">
+    <link rel="stylesheet" href="navbar.css">
+    <script src="https://kit.fontawesome.com/82ec37f9dc.js" crossorigin="anonymous"></script>
+
+    <style>
+        * {
+            box-sizing: border-box
+        }
+        
+        body {
+            font-family: Verdana, sans-serif;
+            margin: 0
+        }
+        
+        .mySlides {
+            display: none
+        }
+        
+        img {
+            vertical-align: middle;
+        }
+        /* Slideshow container */
+        
+        .slideshow-container {
+            max-width: 80%;
+            max-height: 70%;
+            position: relative;
+            margin: auto;
+            margin-top: 1%;
+        }
+        /* Next & previous buttons */
+        
+        .prev,
+        .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+        /* Position the "next button" to the right */
+        
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+        /* On hover, add a black background color with a little bit see-through */
+        
+        .prev:hover,
+        .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+        /* Caption text */
+        
+        .text {
+            color: #f2f2f2;
+            font-size: 15px;
+            padding: 8px 12px;
+            position: absolute;
+            bottom: 8px;
+            width: 100%;
+            text-align: left;
+            margin-bottom: 14%;
+            margin-left: 7%;
+        }
+        /* Number text (1/3 etc) */
+        
+        .numbertext {
+            color: #f2f2f2;
+            font-size: 12px;
+            padding: 8px 12px;
+            position: absolute;
+            top: 0;
+        }
+        /* The dots/bullets/indicators */
+        
+        .dot {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+        
+        .active,
+        .dot:hover {
+            background-color: #717171;
+        }
+        /* Fading animation */
+        
+        .fade {
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+        
+        .icons {
+            padding: 8px;
+        }
+        
+        .d1 {
+            padding: 10px;
+            padding-bottom: 15px;
+            padding-top: 15px;
+            margin-left: 10px;
+            background-color: black;
+            color: white;
+        }
+        
+        .d1:hover {
+            background-color: white;
+            color: black;
+        }
+        
+        @keyframes fade {
+            from {
+                opacity: .4
+            }
+            to {
+                opacity: 1
+            }
+        }
+        /* On smaller screens, decrease text size */
+        
+        @media only screen and (max-width: 400px) {
+            /* .prev, .next {font-size: 11px}; */
+            .text {
+                font-size: 7px
+            }
+            .icons {
+                padding: 6px;
+            }
+            .d1 {
+                padding: 6px;
+            }
+        }
+    </style>
+</head>
+
+<body style="background-color: black;">
+    <header class="header">
+        <div class="container2">
+            <div class="row align-items-center justify-content-between">
+                <div class="logo" style="display:flex;flex-direction:row;justify-content: center;">
+                    <img src="GAME-X logo.png" style="width: 80px;"></img>
+
+                </div>
+                <input type="checkbox" id="nav-check" />
+                <label for="nav-check" class="nav-toggler">
+              <span></span>
+           </label>
+                <nav class="nav">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="trending.html">Trending</a></li>
+                        <li>
+                            <div class="dropdown">
+                                <button class="dropbtn">Games</button>
+                                <div class="dropdown-content">
+                                    <a href="action.html">Action</a>
+                                    <a href="sports.html">Sports</a>
+                                    <a href="strategy.html">Strategy</a>
+                                    <a href="kids.html">Kids</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li><a href="#">Favourite</a></li>
+                        <li>
+                            <!-- <button style="padding:10px,border-radius:20px,backgroundColor:#2E3134,color:#30FBEF">Request Demo &#8594;</button></li> -->
+                            <!-- <button style="padding: 10px;border-radius:20px;background-color: #2E3134;color: #30FBEF;">Login &#8594;</button></li> -->
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <div class="slideshow-container">
+
+        <div class="mySlides fade">
+            <div class="movie-card" data-movie="Blade Runner ">
+                <div class="movie-card__overlay"></div>
+                <div class="movie-card__share">
+
+                    <!-- <img src="tekken7.jpg " class="img-responsive w-96 h-96" alt=" "> -->
+                    <a style=" color: yellow; background-color: rgba(8, 8, 8, 0.637); padding: 10px; border-radius: 10px; "><i class="fa-solid fa-star " style="padding-right: 5px; "></i>9</a>
+                </div>
+
+                <div class="movie-card__content ">
+                    <div class="movie-card__header ">
+
+                        <h1 class="movie-card__title ">Cyberpunk 2077</h1>
+                        <h4 class="movie-card__info ">(2019) Action, Role Playing</h4>
+                    </div>
+                    <p class="movie-card__desc ">The story takes place in Night City, an open world set in the Cyberpunk universe. Players assume the first-person perspective of a customisable mercenary known as V, who can acquire skills in hacking and machinery with options for
+                        melee and ranged combat. </p>
+                    <button class="btn btn-outline movie-card__button " type="button "><i class="fa-solid fa-download icons " ></i>Download</button>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="mySlides fade ">
+            <div class="movie-card " data-movie="Blade Runner ">
+                <div class="movie-card__overlay "></div>
+                <div class="movie-card__share ">
+                    <a style="color: yellow; background-color: rgba(8, 8, 8, 0.637); padding: 10px; border-radius: 10px; "><i class="fa-solid fa-star " style="padding-right: 5px; "></i>6.6</a>
+                </div>
+                <div class="movie-card__content ">
+                    <div class="movie-card__header ">
+                        <h1 class="movie-card__title ">Call of Duty: Warzone</h1>
+                        <h4 class="movie-card__info ">(2020) Action, Thriller</h4>
+                    </div>
+                    <p class="movie-card__desc ">The game features two main modes: Battle Royale and Plunder. Warzone introduces a new in-game currency system that can be used at "Buy Stations " in and around the map.</p>
+                    <button class="btn btn-outline movie-card__button " type="button "><i class="fa-solid fa-download icons " ></i>Download</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="mySlides fade ">
+            <div class="movie-card " data-movie="Sekiro: Shadows Die Twice ">
+                <div class="movie-card__overlay "></div>
+                <div class="movie-card__share ">
+                    <a style="color: yellow; background-color: rgba(8, 8, 8, 0.637); padding: 10px; border-radius: 10px; "><i class="fa-solid fa-star " style="padding-right: 5px; "></i>8.5</a>
+                </div>
+                <div class="movie-card__content ">
+                    <div class="movie-card__header ">
+                        <h1 class="movie-card__title ">Sekiro: Shadows Die Twice</h1>
+                        <h4 class="movie-card__info ">(2019) Action, Adventure</h4>
+                    </div>
+                    <p class="movie-card__desc ">Sekiro: Shadows Die Twice[a] is a 2019 action-adventure game developed by FromSoftware and published by Activision. The game follows a shinobi known as Wolf as he attempts to take revenge on a samurai clan who attacked him and kidnapped
+                        his lord.</p>
+                    <button class="btn btn-outline movie-card__button " type="button "><i class="fa-solid fa-download icons " ></i>Download</button>
+                </div>
+            </div>
+        </div>
+
+        <a class="prev " onclick="plusSlides(-1) ">❮</a>
+        <a class="next " onclick="plusSlides(1) ">❯</a>
+
+    </div>
+    <br>
+
+    <div style="text-align:center ">
+        <span class="dot " onclick="currentSlide(1) "></span>
+        <span class="dot " onclick="currentSlide(2) "></span>
+        <span class="dot " onclick="currentSlide(3) "></span>
+    </div>
+    <div style="margin-left: 3%;margin-top: 20px;color: white; ">
+        <h2 style="padding-left: 20px; "><i class="fa-brands fa-fantasy-flight-games " style="color: wheat; border-radius: 60%;background-color: #2196f3;padding: 5px; "></i>Strategy Games</h2>
+    </div>
+    <div class="card__collection clear-fix " style="margin-left: 20px; ">
+        <!-- <div class="cards cards--two ">
+        <img src="https://images.unsplash.com/photo-1504703395950-b89145a5425b?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=d702cb99ca804bffcfa8820c46483264&auto=format&fit=crop&w=651&q=80 " class="img-responsive " alt="Cards Image ">
+        <span class="cards--two__rect "></span>
+        <span class="cards--two__tri "></span>
+        <p>Lucy Grace</p>
+        <ul class="cards__list ">
+          <li><i class="fab fa-facebook-f "></i></li>
+          <li><i class="fab fa-twitter "></i></li>
+          <li><i class="fab fa-instagram "></i></li>
+          <li><i class="fab fa-linkedin-in "></i></li>
+        </ul>
+      </div> -->
+        <div class="cards cards--three ">
+            <img src="mortal_kombat11.jpg " class="img-responsive w-max " alt=" ">
+            <span class="cards--three__rect-1 ">
+          <span class="shadow-1 "></span>
+            <p>Mortal Kombat<i class="fa-solid fa-star " style="padding: 10px; color: yellow; "></i>9</p>
+            </span>
+            <span class="cards--three__rect-2 ">
+          <span class="shadow-2 "></span>
+            </span>
+            <span class="cards--three__circle "></span>
+            <ul class="cards--three__list ">
+                <a type="button " href="download.html " class="d1 " style=" border-radius:65% ; text-decoration: none; margin-bottom: 80%; "><i class="fa-solid fa-download icons " ></i></a>
+            </ul>
+        </div>
+        <div class="cards cards--three ">
+            <img src="cod.jpg " class="img-responsive " alt=" ">
+            <span class="cards--three__rect-1 ">
+          <span class="shadow-1 "></span>
+            <p>Call of Duty<i class="fa-solid fa-star " style="padding: 10px; color: yellow; "></i>6.6</p>
+            </span>
+            <span class="cards--three__rect-2 ">
+          <span class="shadow-2 "></span>
+            </span>
+            <span class="cards--three__circle "></span>
+            <ul class="cards--three__list ">
+                <a type="button " href="cod_download.html " class="d1 " style=" border-radius:65% ; text-decoration: none; margin-bottom: 80%; "><i class="fa-solid fa-download icons " ></i></a>
+            </ul>
+        </div>
+        <div class="cards cards--three ">
+            <img src="sekiro.jpg " class="img-responsive " alt=" ">
+            <span class="cards--three__rect-1 ">
+          <span class="shadow-1 "></span>
+            <p>Sekiro<i class="fa-solid fa-star " style="padding: 10px; color: yellow; "></i>9.5</p>
+            </span>
+            <span class="cards--three__rect-2 ">
+          <span class="shadow-2 "></span>
+            </span>
+            <span class="cards--three__circle "></span>
+            <ul class="cards--three__list ">
+                <a type="button " href="sekiro_download.html" class="d1 " style=" border-radius:65% ; text-decoration: none; margin-bottom: 80%; "><i class="fa-solid fa-download icons " ></i></a>
+            </ul>
+        </div>
+        <div class="cards cards--three ">
+            <img src="tekken7 - Copy.jpg " class="img-responsive " alt=" ">
+            <span class="cards--three__rect-1 ">
+          <span class="shadow-1 "></span>
+            <p>Tekken 7<i class="fa-solid fa-star " style="padding: 10px; color: yellow; "></i>9.5</p>
+            </span>
+            <span class="cards--three__rect-2 ">
+          <span class="shadow-2 "></span>
+            </span>
+            <span class="cards--three__circle "></span>
+            <ul class="cards--three__list ">
+                <a type="button " href="tekken7_download.html" class="d1 " style=" border-radius:65% ; text-decoration: none; margin-bottom: 80%; "><i class="fa-solid fa-download icons " ></i></a>
+            </ul>
+        </div>
+        <div class="cards cards--three ">
+            <img src="cyberpunk2077.jpg " class="img-responsive " alt=" ">
+            <span class="cards--three__rect-1 ">
+          <span class="shadow-1 "></span>
+            <p>Cyberpunk 2077<i class="fa-solid fa-star " style="padding: 10px; color: yellow; "></i>9</p>
+            </span>
+            <span class="cards--three__rect-2 ">
+          <span class="shadow-2 "></span>
+            </span>
+            <span class="cards--three__circle "></span>
+            <ul class="cards--three__list ">
+                <a type="button " href="download.html " class="d1 " style=" border-radius:65% ; text-decoration: none; margin-bottom: 80%; "><i class="fa-solid fa-download icons " ></i></a>
+            </ul>
+        </div>
+        <div class="cards cards--three ">
+            <img src="VALORANT_Jett_Red.jpg " class="img-responsive " alt=" ">
+            <span class="cards--three__rect-1 ">
+          <span class="shadow-1 "></span>
+            <p>Valorant<i class="fa-solid fa-star " style="padding: 10px; color: yellow; "></i>9</p>
+            </span>
+            <span class="cards--three__rect-2 ">
+          <span class="shadow-2 "></span>
+            </span>
+            <span class="cards--three__circle "></span>
+            <ul class="cards--three__list ">
+                <a type="button " href="download.html " class="d1 " style=" border-radius:65% ; text-decoration: none; margin-bottom: 80%; "><i class="fa-solid fa-download icons " ></i></a>
+            </ul>
+        </div>
+        <div class="cards cards--three ">
+            <img src="Apex_legends_cover.jpg " class="img-responsive " alt=" ">
+            <span class="cards--three__rect-1 ">
+          <span class="shadow-1 "></span>
+            <p>Apex Legends<i class="fa-solid fa-star " style="padding: 10px; color: yellow; "></i>9</p>
+            </span>
+            <span class="cards--three__rect-2 ">
+          <span class="shadow-2 "></span>
+            </span>
+            <span class="cards--three__circle "></span>
+            <ul class="cards--three__list ">
+                <a type="button " href="download.html " class="d1 " style=" border-radius:65% ; text-decoration: none; margin-bottom: 80%; "><i class="fa-solid fa-download icons " ></i></a>
+            </ul>
+        </div>
+        <div class="cards cards--three ">
+            <img src="counterstrike_conditionzero.jpg " class="img-responsive " alt=" ">
+            <span class="cards--three__rect-1 ">
+          <span class="shadow-1 "></span>
+            <p>Counter-Strike<i class="fa-solid fa-star " style="padding: 10px; color: yellow; "></i>7</p>
+
+            </span>
+            <span class="cards--three__rect-2 ">
+          <span class="shadow-2 "></span>
+            </span>
+            <span class="cards--three__circle "></span>
+            <ul class="cards--three__list ">
+                <a type="button " href="download.html " class="d1 " style=" border-radius:65% ; text-decoration: none; margin-bottom: 80%; "><i class="fa-solid fa-download icons " ></i></a>
+            </ul>
+        </div>
+    </div>
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides ");
+            let dots = document.getElementsByClassName("dot ");
+            if (n > slides.length) {
+                slideIndex = 1
+            }
+            if (n < 1) {
+                slideIndex = slides.length
+            }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none ";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active ", " ");
+            }
+            slides[slideIndex - 1].style.display = "block ";
+            dots[slideIndex - 1].className += " active ";
+        }
+    </script>
+    <div class="bottom ">
+        <center>
+            <span class="credit ">Developed with ❤️ By Yash & Nikita | <a href="# " style="color: #2196f3; "> GAME-X</a></span><br>
+            <br>
+            <span class="far fa-copyright "></span><span>2022 All rights reserved.</span>
+        </center>
+    </div>
+</body>
+
+</html>
